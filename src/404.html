@@ -7,7 +7,11 @@
   </head>
   <body>
     <script>
-      window.location.href = "/spotify-playlists/";
+      // Get the parameters from the current URL
+      var params = window.location.search.slice(1);
+
+      // Redirect to the Callback component with the parameters
+      window.location.href = "/spotify-playlists/callback?" + params;
     </script>
   </body>
 </html>
