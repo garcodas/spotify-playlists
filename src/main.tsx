@@ -9,7 +9,7 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<App />} />
+        <Route path="/spotify-playlists/" element={<App />} />
         <Route path="/callback" element={<Callback />} />
       </Routes>
     </BrowserRouter>
