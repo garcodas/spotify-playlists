@@ -16,7 +16,7 @@ export default defineConfig({
   optimizeDeps: {
     exclude: ["zod", "react-hook-form"],
   },
-  base: "/spotify-playlists/",
+  base: "/",
   define: {
     "process.env": process.env,
   },
