@@ -40,13 +40,13 @@ const CookieNotice = () => {
           onClick={handleAcceptAll}
           className="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded"
         >
-          Aceptar todo
+          Aceptar todas
         </button>
         <button
           onClick={handleRejectAll}
           className="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded"
         >
-          Rechazar todo
+          Rechazar todas
         </button>
         <button
           onClick={handleHideNotice}
