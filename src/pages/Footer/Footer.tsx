@@ -28,7 +28,10 @@ const Footer = () => {
           <a href="https://dev.to/garcodas" className="hover:text-gray-200">
             <TfiWrite />
           </a>
-          <a href="https://github.com/garcodas" className="hover:text-gray-200">
+          <a
+            href="https://github.com/garcodas/spotify-playlists.git"
+            className="hover:text-gray-200"
+          >
             <FaGitAlt />
           </a>
         </div>
