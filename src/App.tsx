@@ -7,6 +7,7 @@ import { isTokenExpired } from "./services/authService";
 import { toast } from "sonner";
 import CookieNotice from "./pages/CookieNotice/CookieNotice";
 import Footer from "./pages/Footer/Footer";
+import { Analytics } from "@vercel/analytics/react";
 function App() {
   useEffect(() => {
     if (isTokenExpired()) {
@@ -18,6 +19,7 @@ function App() {
   return (
     <>
       <div className="flex flex-col min-h-screen">
+        <Analytics debug={false} />
         <CookieNotice />
         <UserSection />
         <CloneSection />
