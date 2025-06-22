@@ -6,8 +6,6 @@ import { spotifyClientId, spotifyRedirectUrl } from "@/config/config";
 const clientId: string = spotifyClientId;
 const redirectUri: string = spotifyRedirectUrl;
 
-console.log("RedirectUri", redirectUri);
-
 const scopes = [
   "playlist-read-private",
   "playlist-modify-public",

@@ -34,7 +34,6 @@ async function getPlaylistInfo(
 
     return playlist;
   } catch (error) {
-    console.error("Error fetching playlist info:", error);
     return null;
   }
 }
@@ -63,7 +62,6 @@ async function getPlaylistTracks(playlistId: string): Promise<SpotifyTrack[]> {
 
     return tracks;
   } catch (error) {
-    console.error("Error fetching playlist tracks:", error);
     return [];
   }
 }
@@ -90,7 +88,6 @@ async function createPlaylist(name: string): Promise<string | null> {
     const newPlaylistId = response.data.id;
     return newPlaylistId;
   } catch (error) {
-    console.error("Error creating playlist:", error);
     return null;
   }
 }
@@ -122,7 +119,6 @@ async function addTracksToPlaylist(
 
     return true;
   } catch (error) {
-    console.error("Error adding tracks to playlist:", error);
     throw new Error("Failed to add tracks to playlist.");
   }
 }

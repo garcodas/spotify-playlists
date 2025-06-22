@@ -14,7 +14,18 @@ export default defineConfig({
     {
       name: "configure-server",
       configureServer(server) {
-        server.middlewares.use(history() as Connect.NextHandleFunction);
+        server.middlewares.use(
+          history({
+            disableDotRule: true,
+            htmlAcceptHeaders: ["text/html"],
+            rewrites: [
+              {
+                from: /^\/@vite\//,
+                to: (ctx) => ctx.parsedUrl.pathname || "/",
+              }, // permite archivos de Vite
+            ],
+          }) as Connect.NextHandleFunction
+        );
       },
     },
   ],

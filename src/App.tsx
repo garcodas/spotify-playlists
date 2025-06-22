@@ -8,6 +8,7 @@ import { toast } from "sonner";
 import CookieNotice from "./pages/CookieNotice/CookieNotice";
 import Footer from "./pages/Footer/Footer";
 import { Analytics } from "@vercel/analytics/react";
+import { Toaster } from "./components/ui/sonner";
 function App() {
   useEffect(() => {
     if (isTokenExpired()) {
@@ -19,6 +20,7 @@ function App() {
   return (
     <>
       <div className="flex flex-col min-h-screen">
+        <Toaster position="top-center" richColors />
         <Analytics debug={false} />
         <CookieNotice />
         <UserSection />

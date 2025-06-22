@@ -78,6 +78,15 @@ const CloneSection = () => {
       const playListInfo = await getPlaylistInfo(playListId ?? "");
       const playListTracks = await getPlaylistTracks(playListId ?? "");
 
+      if (!playListInfo || !playListTracks) {
+        toast.error("No se pudo obtener la información de la playlist.", {
+          description:
+            "Asegúrate de que el enlace sea correcto. O que la playlist sea pública.",
+        });
+        setIsLoading(false);
+        return;
+      }
+
       const excludedSongs = new Set<string>();
 
       for (const song of values.songs) {
@@ -103,10 +112,10 @@ const CloneSection = () => {
         );
       }
 
-      toast("Playlist Creada");
+      toast.success("Playlist Creada");
       form.reset();
     } catch (error) {
-      console.error(error);
+      toast.error("Error al clonar la playlist.");
     }
     setIsLoading(false);
   };
