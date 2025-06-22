@@ -77,7 +77,7 @@ const MergeSection = () => {
         if (!playListInfo || !playListTracks) {
           toast.error("No se pudo obtener la información de la playlist.", {
             description:
-              "Asegúrate de que el enlace sea correcto. O que la playlist sea pública.",
+              "Esta playlist no se puede clonar. Puede que sea privada, creada por Spotify o no exista.",
           });
           setIsLoading(false);
           throw new Error("No se pudo obtener la información de la playlist.");
