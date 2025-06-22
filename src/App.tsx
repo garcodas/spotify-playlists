@@ -13,7 +13,9 @@ function App() {
   useEffect(() => {
     if (isTokenExpired()) {
       // window.location.href = getAuthUrl();
-      toast("Debes acceder con Spotify para empezar a clonar y unir playlists");
+      toast.info(
+        "Debes acceder con Spotify para empezar a clonar y unir playlists"
+      );
     }
   }, []);
 
